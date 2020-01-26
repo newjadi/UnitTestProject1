@@ -53,8 +53,8 @@ namespace MailPage
 
             //4. Ждем когда появиться нужный элемент, проверяем. Заполняем поле "Тело письма".
             WebDriverWait wait3 = new WebDriverWait(chrome, TimeSpan.FromSeconds(20));
-            wait3.Until(ExpectedConditions.ElementExists(By.XPath("/html/body/div[15]/div[2]/div/div[1]/div[2]/div[3]/div[5]/div/div/div[2]/div[1]/div/div[1]")));
-            chrome.FindElementByXPath("/html/body/div[15]/div[2]/div/div[1]/div[2]/div[3]/div[5]/div/div/div[2]/div[1]/div/div[1]").SendKeys("Много текста");
+            wait3.Until(ExpectedConditions.ElementExists(By.XPath("//div[3]/div[5]/div/div/div[2]/div")));
+            chrome.FindElementByXPath("//div[3]/div[5]/div/div/div[2]/div").SendKeys("Много текста");
 
             //Находим и нажимаем кнопку отправить письмо.
             chrome.FindElementByXPath("//div[2]/div/span/span/span").Click();
